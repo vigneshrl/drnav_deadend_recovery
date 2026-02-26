@@ -114,12 +114,6 @@ The code attempts to use Weights & Biases (`wandb`). You can disable or remove `
 wandb login
 ```
 
-## Extending the code
-
-- Add a small CLI wrapper (argparse) to `data_loader.py` or create separate `train_runner.py` and `inference_runner.py` files to make experiments reproducible.
-- Add a `requirements.txt` to pin package versions.
-- Add unit tests for `DeadEndDataset.read_lidar_bin` and `focal_loss_dead_end` to catch data and numerical issues early.
-
 ## Troubleshooting checklist
 
 1. Confirm dataset layout (images, lidar bins, optional annotations).
@@ -127,10 +121,3 @@ wandb login
 3. Use small batch sizes for initial runs to verify training/inference works.
 4. Watch for silent except blocks — enable printing of caught exceptions for debugging.
 
-If you want, I can:
-- Add small `train_runner.py` and `inference_runner.py` to the repo.
-- Add a `requirements.txt` with pinned versions.
-- Make the `data_loader.py` `__main__` section accept CLI args instead of editing the file.
-
-Tell me which of those you'd like me to do and I'll implement it.
-# DR. Nav: Semantic-Geometric Representations for Proactive Dead-End Recovery and Navigation
